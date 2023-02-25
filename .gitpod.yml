@@ -2,13 +2,13 @@
 tasks:
   - name: Install Python packages
     command: |
+      pyenv global 3.11
       python -m pip install -U black
   - name: Configure git
     command: curl https://gist.githubusercontent.com/donnerc/fc0312cc3431d9b3e675/raw/821a897e08e8e983a8fdf8add57e6b8cded5ed40/git-config.sh | sh
 
 
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-python-3.11
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 # ports:
